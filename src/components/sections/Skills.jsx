@@ -1,43 +1,61 @@
-import { Badge } from "@/components/ui/badge";
 import SectionTitle from "../common/SectionTitle";
 
-export default function Skills() {
-  const skills = {
-    Languages: ["JavaScript", "Java", "SQL", "HTML", "CSS"],
-    Frameworks: ["React", "Node.js", "Express", "React Native", "Redux Toolkit", "Handlebars"],
-    Databases: ["MongoDB", "MySQL", "Sequelize"],
-    Tools: ["Git", "Postman", "VS Code", "AWS", "Azure TFS", "Shopify"],
-    Concepts: ["REST APIs", "MVC", "Authentication", "Session Management", "Input Validation", "XSS Protection"],
-  };
+const skills = [
+  {
+    group: "Languages",
+    items: ["JavaScript", "Java", "SQL", "HTML", "CSS"],
+  },
+  {
+    group: "Frameworks",
+    items: ["React", "Node.js", "Express", "React Native", "Redux Toolkit", "Handlebars"],
+  },
+  {
+    group: "Databases",
+    items: ["MongoDB", "MySQL", "Sequelize"],
+  },
+  {
+    group: "Tools & Cloud",
+    items: ["Git", "Postman", "VS Code", "AWS", "Azure TFS", "Shopify"],
+  },
+  {
+    group: "Concepts",
+    items: ["REST APIs", "MVC", "Authentication", "Session Management", "Input Validation", "XSS Protection"],
+  },
+];
 
+export default function Skills() {
   return (
     <section id="skills" className="py-16">
-      <div className="space-y-8">
-        <div className="space-y-1">
+      <div className="space-y-10">
+        <div className="space-y-2">
           <SectionTitle text="Skills" />
-          <p className="text-muted-foreground text-sm m-0">
+          <span className="section-underline block" />
+          <p className="text-muted-foreground text-sm">
             A focused stack aligned to production full-stack work.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {Object.entries(skills).map(([group, items]) => (
-            <div key={group} className={`group rounded-xl border p-5`}>
-              <h3 className="font-semibold tracking-tight">{group}</h3>
+        <div className="rounded-xl border bg-(--card) overflow-hidden divide-y divide-(--border)">
+          {skills.map(({ group, items }) => (
+            <div
+              key={group}
+              className="grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr] items-start gap-4 px-5 py-4 transition-colors hover:bg-(--muted)/40"
+            >
+              <div className="flex items-center gap-2.5 pt-0.5">
+                <span className="h-4 w-0.5 rounded-full bg-linear-to-b from-(--grad-from) to-(--grad-to) shrink-0" />
+                <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  {group}
+                </span>
+              </div>
 
-              <div className="mt-3 flex flex-wrap gap-2">
-                {items.map((s) => (
-                  <Badge
-                    key={s}
-                    variant="secondary"
-                    className="
-                      transition
-                      hover:border-black hover:text-black hover:bg-transparent
-                      dark:hover:bg-white dark:hover:text-black dark:hover:border-transparent
-                    "
+              <div className="flex flex-wrap gap-2">
+                {items.map((skill) => (
+                  <span
+                    key={skill}
+                    className="inline-flex items-center rounded-md border border-(--border) bg-(--background) px-2.5 py-1 text-xs font-medium text-(--foreground) transition-colors duration-150 hover:border-primary/50 hover:bg-(--muted)/60 cursor-default select-none"
                   >
-                    {s}
-                  </Badge>
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
