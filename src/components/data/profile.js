@@ -7,9 +7,9 @@ export const profile = {
     "Software Engineer with experience building scalable web and mobile applications using the MERN stack, including supply chain systems with workflow automation, real-time inventory tracking, and e-commerce integrations.",
   links: {
     github: "https://github.com/Dhruv-bhardwaj99",
-    linkedin: "https://www.linkedin.com/in/dhruv-bhardwaj-3373801a8/",
+    linkedin: "https://www.linkedin.com/in/dhruv-bhardwaj0206/",
     email: "mailto:11dhruv.b@gmail.com",
-    resume: "/Dhruv_Bhardwaj_resume_SIT.pdf",
+    resume: "/Dhruv_Bhardwaj_Resume_US.pdf",
   },
   highlights: [
     "Built production web + mobile features for supply chain workflows and inventory tracking.",

@@ -43,7 +43,7 @@ export default function Hero() {
           <div className="inline-flex items-center gap-2 rounded-full border bg-white/70 px-2 py-1 text-sm font-semibold backdrop-blur dark:bg-white/5 dark:border-white/10 shadow-sm">
             <a
               href={profile.links.resume}
-              download="Dhruv_Bhardwaj_resume_SIT.pdf"
+              download="Dhruv_Bhardwaj_Resume_US.pdf"
               className="inline-flex items-center gap-2 rounded-full px-2 py-1 transition hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
               aria-label="Download resume"
             >
@@ -51,7 +51,7 @@ export default function Hero() {
             </a>
             <span className="px-2">Download Resume</span>
             <a
-              href="https://drive.google.com/file/d/1NeImCQbZutDT_eAdWd4WYxz4SJ9Qqea2/view?usp=sharing"
+              href="https://drive.google.com/file/d/1Nke1S-hpD6FJoQjqHaBQQk_9tdyJA3FG/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center rounded-full bg-white px-2 py-1 text-muted-foreground transition hover:text-foreground dark:bg-white/10 dark:text-white/70 dark:hover:bg-white/20"
